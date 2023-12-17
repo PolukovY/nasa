@@ -18,13 +18,16 @@ public class NasaCameraEntity {
     @Getter
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false)
     private Long id;
 
     @Getter
+    @Column(name = "nasa_id", nullable = false)
     private Long nasaId;
 
     @Setter
     @Getter
+    @Column(name = "name", nullable = false)
     private String name;
 
     @OneToMany(mappedBy = "nasaCamera", cascade = CascadeType.PERSIST)

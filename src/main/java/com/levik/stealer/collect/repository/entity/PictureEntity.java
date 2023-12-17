@@ -15,8 +15,10 @@ public class PictureEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false)
     private Long id;
 
+    @Column(name = "img_src", nullable = false)
     private String imgSrc;
 
     private LocalDateTime createdAt;

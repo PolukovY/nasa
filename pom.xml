@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.levik</groupId>
-	<artifactId>nasa</artifactId>
+	<artifactId>stealer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>nasa</name>
 	<description>Nasa Pictures Stealer project for Spring Boot</description>

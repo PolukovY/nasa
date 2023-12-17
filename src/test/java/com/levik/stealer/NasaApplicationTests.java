@@ -1,4 +1,4 @@
-package com.levik.nasa;
+package com.levik.stealer;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

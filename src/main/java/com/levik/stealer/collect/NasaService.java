@@ -28,7 +28,7 @@ public class NasaService {
             List<NasaImage> nasaImages = cameraToPictures.get(nasaCamera);
 
             for (NasaImage nasaImage : nasaImages) {
-                var imageEntity = new PictureEntity(nasaImage);
+                var imageEntity = new PictureEntity(nasaImage, nasaCameraEntity.getNasaId());
                 nasaCameraEntity.addImage(imageEntity);
             }
             nasaCameraEntities.add(nasaCameraEntity);

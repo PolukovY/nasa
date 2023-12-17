@@ -4,6 +4,7 @@ import com.levik.stealer.nasa.model.NasaCamera;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -34,7 +35,9 @@ public class NasaCameraEntity {
     @Getter
     private final List<PictureEntity> images = new ArrayList<>();
 
+    @CreationTimestamp
     @Getter
+    @Column(name = "created_at", nullable = false)
     private LocalDateTime createdAt;
 
     public NasaCameraEntity() {
@@ -43,7 +46,6 @@ public class NasaCameraEntity {
     public NasaCameraEntity(NasaCamera nasaCamera) {
         this.nasaId = nasaCamera.id();
         this.name = nasaCamera.name();
-        this.createdAt = LocalDateTime.now();
     }
 
     public void addImage(PictureEntity pictureEntity) {

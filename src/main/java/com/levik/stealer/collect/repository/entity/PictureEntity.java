@@ -4,6 +4,7 @@ import com.levik.stealer.nasa.model.NasaImage;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 
@@ -21,6 +22,12 @@ public class PictureEntity {
     @Column(name = "img_src", nullable = false)
     private String imgSrc;
 
+    @Getter
+    @Column(name = "nasa_id", nullable = false)
+    private Long nasaId;
+
+    @CreationTimestamp
+    @Column(name = "created_at", nullable = false)
     private LocalDateTime createdAt;
 
     @ManyToOne
@@ -30,8 +37,8 @@ public class PictureEntity {
     public PictureEntity() {
     }
 
-    public PictureEntity(NasaImage nasaImage) {
+    public PictureEntity(NasaImage nasaImage, Long nasaId) {
         this.imgSrc = nasaImage.imgSrc();
-        this.createdAt = LocalDateTime.now();
+        this.nasaId = nasaId;
     }
 }

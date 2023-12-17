@@ -2,6 +2,7 @@ package com.levik.stealer.collect.repository.entity;
 
 import com.levik.stealer.nasa.model.NasaImage;
 import jakarta.persistence.*;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
@@ -11,6 +12,7 @@ import java.time.LocalDateTime;
 @Setter
 @Getter
 @Table(name = "pictures")
+@EqualsAndHashCode
 @Entity
 public class PictureEntity {
 

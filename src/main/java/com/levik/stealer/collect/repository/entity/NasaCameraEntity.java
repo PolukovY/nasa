@@ -2,6 +2,7 @@ package com.levik.stealer.collect.repository.entity;
 
 import com.levik.stealer.nasa.model.NasaCamera;
 import jakarta.persistence.*;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
@@ -12,6 +13,7 @@ import java.util.List;
 
 
 @Table(name = "cameras")
+@EqualsAndHashCode
 @Entity
 public class NasaCameraEntity {
 

@@ -4,6 +4,7 @@ import com.levik.stealer.collect.CollectNasaFacade;
 import com.levik.stealer.collect.api.dto.SolDto;
 import com.levik.stealer.nasa.model.NasaCamera;
 import com.levik.stealer.nasa.model.NasaImage;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -20,7 +21,7 @@ public class StealerPicturesController {
 
     @PostMapping("/pictures")
     @ResponseStatus(HttpStatus.CREATED)
-    public Map<NasaCamera, List<NasaImage>> collectNasaCameraToPictures(@RequestBody SolDto solDto) {
+    public Map<NasaCamera, List<NasaImage>> collectNasaCameraToPictures(@Valid @RequestBody SolDto solDto) {
         return collectNasaFacade.collectNasaCameraToPictures(solDto);
     }
 }

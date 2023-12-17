@@ -1,4 +1,6 @@
 package com.levik.stealer.collect.api.dto;
 
-public record SolDto(Integer sol) {
+import jakarta.validation.constraints.NotNull;
+
+public record SolDto(@NotNull Integer sol) {
 }

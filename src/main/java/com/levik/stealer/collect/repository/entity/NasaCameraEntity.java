@@ -27,7 +27,7 @@ public class NasaCameraEntity {
     @Getter
     private String name;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "nasaCamera", cascade = CascadeType.PERSIST)
+    @OneToMany(mappedBy = "nasaCamera", cascade = CascadeType.PERSIST)
     @Getter
     private final List<PictureEntity> images = new ArrayList<>();
 
